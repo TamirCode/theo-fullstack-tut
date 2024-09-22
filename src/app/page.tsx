@@ -1,5 +1,8 @@
 import { db } from '~/server/db'
 
+// forces nextjs to treat this page as a dynamic route so data will be updated as expected
+export const dynamic = "force-dynamic"
+
 const mockUrls = [
 	"https://utfs.io/f/PSUWmjBduwh1vjZ3UlLNbAGOhHa1UkIBPQRxogTnz476sZ92",
 	"https://utfs.io/f/PSUWmjBduwh1etXPIAE8w6cdfFx729nHA05ShTv4EjIBug1M",
