@@ -8,5 +8,5 @@ export default {
 	dbCredentials: {
 		url: env.POSTGRES_URL,
 	},
-	tablesFilter: ["theo-fullstack-tut_*"],
+	tablesFilter: ["TheoTut_*"],
 } satisfies Config
