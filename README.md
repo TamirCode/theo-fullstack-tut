@@ -36,7 +36,7 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 - [x] set up database w/ vercel postgress
 - [x] attach database to UI
 - [x] authentication w/ clerk
-- [ ] add image upload
+- [x] add image upload
 - [ ] "taint" (server-only)
 - [ ] use next/image component
 - [ ] error management w/ sentry
