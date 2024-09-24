@@ -12,7 +12,9 @@ const config = {
 	},
 	eslint: {
 		ignoreDuringBuilds: true
-	}
+	},
+	// timestamp 1:20:00
+	images: { remotePatterns: [{ hostname: "utfs.io" }] }
 }
 
 export default config
