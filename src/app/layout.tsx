@@ -6,9 +6,9 @@ import { type Metadata } from "next"
 import { ClerkProvider } from '@clerk/nextjs'
 import TopNav from './_components/TopNav'
 
-import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
-import { extractRouterConfig } from "uploadthing/server";
-import { ourFileRouter } from "~/app/api/uploadthing/core";
+import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin"
+import { extractRouterConfig } from "uploadthing/server"
+import { ourFileRouter } from "~/app/api/uploadthing/core"
 
 export const metadata: Metadata = {
 	title: "theo fullstack tut",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 	icons: [{ rel: "icon", url: "/favicon.ico" }],
 }
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children, modal }: Readonly<{ children: React.ReactNode; modal: React.ReactNode }>) {
 
 	return (
 		<ClerkProvider>
@@ -33,6 +33,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 					/>
 					<TopNav />
 					{children}
+					{modal}
+					<div id="modal-root" />
 				</body>
 			</html>
 		</ClerkProvider>

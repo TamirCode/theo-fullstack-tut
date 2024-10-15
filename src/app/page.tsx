@@ -1,5 +1,6 @@
 import { SignedIn, SignedOut } from '@clerk/nextjs'
 import Image from 'next/image'
+import Link from 'next/link'
 import { getMyImages } from '~/server/queries'
 
 // forces nextjs to treat this page as a dynamic route so data will be updated as expected and bypass nextjs Cache
@@ -16,13 +17,15 @@ async function Images() {
 			{
 				images.map(image =>
 					<div key={image.id} className="w-48 h-48 flex flex-col justify-center">
-						<Image
-							src={image.url}
-							alt={image.name}
-							style={{ objectFit: "contain" }}
-							height={192}
-							width={192}
-						/>
+						<Link href={`/img/${image.id}`}>
+							<Image
+								src={image.url}
+								alt={image.name}
+								style={{ objectFit: "contain" }}
+								height={192}
+								width={192}
+							/>
+						</Link>
 						<div>{image.name}</div>
 					</div>)
 			}
